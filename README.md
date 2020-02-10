@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+質問の投稿・回答を行うサービス
 
-Things you may want to cover:
+
+* heroku-URL
+https://test-qnada.herokuapp.com/ 
 
 * Ruby version
+2.5.1
 
-* System dependencies
+* Rails version
+5.2.1
 
-* Configuration
+質問投稿方法
+・メイン画面左下"New question"をクリック
+・名前，質問タイトル，質問内容を入力し"Save"をクリック（３つすべてが入力されていないと登録不可）
+（削除・編集可能）
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+質問回答方法
+・メイン画面にて質問タイトルをクリック
+・画面下にて名前，回答内容を入し"Post"をクリック（２つすべてが入力されていないと登録不可）
+（削除・編集可能）

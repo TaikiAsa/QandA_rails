@@ -13,8 +13,8 @@ class AnswersController < ApplicationController
   end
 
   def edit
-    @question = Question.find(params[:id])
-    @answer = @question.answer.find(params[:question_id])
+    @question = Question.find(params[:question_id])
+    @answer = @question.answer.find(params[:id])
   end
   
   def destroy
@@ -31,7 +31,7 @@ class AnswersController < ApplicationController
       redirect_to question_path(@question), notice: 'Success!'
     else
       flash[:alert] = 'Save error!'
-      render :new
+      render :edit
     end
   end
   

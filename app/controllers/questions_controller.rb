@@ -16,7 +16,7 @@ class QuestionsController < ApplicationController
   def create
     @question = Question.new(question_params)
     if @question.save
-      redirect_to root_path, notice: 'Success!'
+      redirect_to '/questions', notice: 'Success!'
     else
       flash[:alert] = 'Save error!'
       render :new
@@ -30,17 +30,17 @@ class QuestionsController < ApplicationController
   def update
     # @question = Question.find(params[:id])
     if @question.update(question_params)
-      redirect_to root_path, notice: 'Success!'
+      redirect_to '/questions', notice: 'Success!'
     else
       flash[:alert] = 'Save error!'
-      render :new
+      render :edit
     end
   end
   
   def destroy
     # @question = Question.find(params[:id])
     @question.destroy
-    redirect_to root_path, notice: 'Success!'
+    redirect_to '/questions', notice: 'Success!'
   end
   
   def show

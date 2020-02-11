@@ -5,10 +5,10 @@ Rails.application.routes.draw do
   # get 'questions/new'
   # get 'questions/edit'
   
-  root 'questions#index'
+  root 'tops#index'
   resources :questions do
     resources :answers
   end
-  
+  # resources :tops
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

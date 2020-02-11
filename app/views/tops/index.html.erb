@@ -1,0 +1,47 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Cover Template for Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/cover/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <%= stylesheet_link_tag "cover", :media => "all" %>
+  </head>
+  <body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <h3 class="masthead-brand">Rails App</h3>
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link" href="https://github.com/TaikiAsa/QandA_rails">Git Hub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main role="main" class="inner cover">
+    <h1 class="cover-heading">Q and A system</h1>
+    <p class="lead"> Ruby version 2.5.1 <br>  Rails version 5.2.1</p>
+    <p class="lead">
+      <%= button_to "Launch",  {controller: 'questions', action: 'index'}, {method: :get, class:"btn btn-lg btn-secondary",} %>
+    </p>
+  </main>
+
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p></p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

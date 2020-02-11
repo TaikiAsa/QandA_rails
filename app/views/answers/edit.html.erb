@@ -1,11 +1,23 @@
+<%= stylesheet_link_tag "cover", :media => "all" %>
+  <body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand"><a link href="/">Rails App</a></h3>
+          <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link active" href="https://test-qnada.herokuapp.com/ ">Home</a>
+          <a class="nav-link" href="https://github.com/TaikiAsa/QandA_rails">Git Hub</a>
+          </nav>
+        </div>
+      </header>
 <div>
   <h2>Update answer</h2>
   <%= form_with model:[@question, @answer], local: true do |f| %>
-    <div class="form-group">
+    <div class="text-left form-group">
       <lavel>Name</lavel>
       <%= f.text_field :name, class: "form-control" %>
     </div>
-    <div class="form-group">
+    <div class="text-left form-group">
       <lavel>Content</lavel>
       <%= f.text_area :content, class: "form-control" %>
     </div>
@@ -14,3 +26,11 @@
     </div>
   <% end %>
 </div>
+
+    <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p></p>
+    </div>
+    </footer>
+</div>
+</body>

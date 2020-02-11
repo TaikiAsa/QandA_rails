@@ -1,6 +1,44 @@
+<%= stylesheet_link_tag "cover", :media => "all" %>
+  <body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand"><a link href="/">Rails App</a></h3>
+          <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link active" href="/questions ">Home</a>
+          <a class="nav-link" href="https://github.com/TaikiAsa/QandA_rails">Git Hub</a>
+          </nav>
+        </div>
+      </header>
 <div>
-  <div class="col-md-4 offset-md-4">
+
+
+  <div class="col-md-10 offset-md-1">
     <h2 class="text-center">Edit question</h2>
-    <%= render 'form' %>
+    <%= form_with model: @question, local:true do |f| %>
+      <div class="text-left form-group">
+        <lavel>Name</lavel>
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+      <div class="text-left form-group">
+        <lavel>Title</lavel>
+        <%= f.text_field :title, class: "form-control" %>
+      </div>
+      <div class="text-left form-group">
+        <lavel>Content</lavel>
+        <%= f.text_area :content, class: "form-control" %>
+      </div>
+      <div class="text-center">
+        <%= f.submit "Save", class: "btn btn-primary" %>
+      </div>
+    <% end %>
   </div>
+  
 </div>
+    <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p></p>
+    </div>
+    </footer>
+</div>
+</body>
